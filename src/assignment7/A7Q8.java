@@ -17,10 +17,8 @@ public class A7Q8 {
         //calculating if it is winter 
         if (month <= 3 && day <= 15) {
             season = "Winter";
-        } else if (month <= 12 && day <= 16){
-            season = "Winter";
             //if it is spring
-        }else if (month <= 3 && day <= 15) {
+        } else if (month <= 3 && day <= 15) {
             season = "Spring";
         } else if (month <= 6 && day <= 15) {
             season = "Spring";
@@ -34,10 +32,12 @@ public class A7Q8 {
             season = "Fall";
         } else if (month <= 12 && day <= 15) {
             season = "Fall";
+        } else if (month <= 12 && day <= 16) {
+            season = "Winter";
         }
         //outputing the season 
         return season;
-        BROKE
+
     }
 
     /**
@@ -45,18 +45,18 @@ public class A7Q8 {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-
+        //scanner
         Scanner input = new Scanner(System.in);
         
+        // statement and variable for the month 
         System.out.println("Please enter the Month as a number");
         int month = input.nextInt();
-        
+
+        //statement and variable for day 
         System.out.println("Please enter the Day as a number");
         int day = input.nextInt();
-        
-        String seasonOutput = seasons(month,day);
-        //output order
-        
-        System.out.println("The season is " + seasonOutput);
+
+        //output
+        System.out.println("The season is " + seasons(month, day));
     }
 }
